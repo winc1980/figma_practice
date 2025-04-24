@@ -1,0 +1,291 @@
+@charset "UTF-8";
+
+/*-----------------------------------------------
+ブロックの基底要素
+-----------------------------------------------*/
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  font-family: "Noto Sans", serif;
+}
+
+body * {
+  font-family: "Noto Sans JP", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  height: 80px; 
+}
+
+.header_wrapper {
+  display: flex; 
+  width: 80%; 
+  margin: 0 auto; 
+  justify-content: space-between; 
+}
+
+.logo {
+  
+  width: 118px;
+  height: 44px;
+  margin-top: 18px;
+}
+
+.logo p {
+  
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 41px;
+  margin-top: 1px;
+  text-align: center;
+  color: #333333;
+}
+
+.download_btn {
+ 
+  width: 160px;
+  height: 52px;
+  background-color: #60caad;
+  margin-top: 14px;
+}
+
+.download_btn :hover {
+  background-color: #7fcab6;
+}
+
+.download_btn a {
+  display: block;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: #ffffff;
+  padding: 13px 0px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gray_wrapper {
+  background-color: #f9f9f9;
+}
+
+#fv .gray_wrapper {
+  background-image: url("images/fv-bg.jpg");/* 背景画像を追加 */
+  background-repeat: no-repeat;/* 初期値のままでは繰り返されてしまうので、繰り返さないようにno-repeatを指定する。 */
+  background-size: 100%; /* 画面いっぱいに表示する。 */
+}
+
+.opacity {
+  background: rgba(249, 249, 249, 0.8); /* #02/fv-center/bgを選択し、propertiesのcolorsを見ると出てくる。RGBで指定したがHexでも良い。 */
+}
+
+#fv .container {
+  padding: 169px 0 151px 0;
+}
+
+h1 {
+
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 52px;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 41px;
+  text-align: center;
+  color: #333333;
+}
+
+#fv h2 {
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.big_btn {
+  width: 400px;
+  height: 71px;
+  background-color: #60caad;
+  margin: 0 auto;
+}
+
+.big_btn :hover {
+  background-color: #7fcab6;
+}
+
+#fv .big_btn {
+  margin-top: 48px; 
+}
+
+.big_btn a {
+  display: block; 
+  font-family: "Noto Sans JP"; 
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+  color: #ffffff;
+  padding: 21px 0px;
+}
+
+#main_contents {
+  padding: 72px 0 80px 0;
+  text-align: center;
+}
+
+#main_contents h2 {
+  margin-bottom: 32px;
+  display: inline-block;
+  position: relative;/* 擬似要素でposition:absolute;を使うために、擬似要素の親要素をpostion:relativeと指定。position:absoluteを使うには、その親要素をposition:relativeにしなくてはいけない。 https://zero-plus.io/media/css-position-absolute/ */
+}
+
+#main_contents h2::after{/* 擬似要素で緑の線を描いた。 */
+  content: "";
+  width: 56px;
+  height: 4px;
+  background-color: #60CAAD;
+  position: absolute;/* 線の位置を自由に指定するためにposition:absolute;を使った。 */
+  top: 40px;
+  bottom: 0;
+  left: 291px;
+}
+
+.flex_wrapper {
+  display: flex; 
+  justify-content: center;
+}
+
+.flex_wrapper img {
+  width: 480px;
+  margin: 0 16px 0 0;
+}
+
+.flex_wrapper p {
+  width: 480px;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+  color: #333333;
+  margin: 110px 0 0 16px;
+}
+
+#bottom_contents .gray_wrapper {
+  /* 余白を調整 */
+  padding: 72px 0 81px 0;
+}
+
+#bottom_contents h2{
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#bottom_contents h2::after  {/* #main_contents h2に対する指定とほとんど同じ。線の位置をleftで微調整した。 */
+  content: "";
+  width: 56px;
+  height: 4px;
+  background-color: #60CAAD;
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  left: 310px;
+}
+
+#bottom_contents p {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #333333;
+  text-align: center;
+  padding: 32px 0 60px 0;
+}
+
+
+#bottom_contents h3 {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #333333;
+  margin-bottom: 12px;
+  padding: 0 8px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}
+
+#bottom_contents h3::before {
+  position: absolute;
+  left: 0;
+  top: -4px;
+  content: "";
+  width: 2px;
+  height: 36px;
+  background: #333333;
+  transform: rotate(-24deg);
+}
+
+#bottom_contents h3::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: -4px;
+  width: 2px;
+  height: 36px;
+  background: #333333;
+  transform: rotate(24deg);
+}
+
+footer {
+  height: 125px;
+  background: #333333;
+}
+
+footer p {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 52px;
+}

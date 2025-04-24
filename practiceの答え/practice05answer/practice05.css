@@ -1,0 +1,209 @@
+/*-----------------------------------------------
+ブロックの基底要素
+-----------------------------------------------*/
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: "Noto Sans", serif;
+}
+
+
+body * {
+    font-family: "Noto Sans JP", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+
+body {
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    margin: 0px;
+}
+
+h2 {
+    margin: 0px;
+}
+
+p {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+img {
+    /* width: 100%; */
+}
+
+/* ------ ここからmain-visual  ------*/
+.haikei {
+    height: 704px;
+    background-image: url('img/fv-bg.jpg') ;
+    background-size: auto 100%;
+}
+.bokashi {
+    background-color: rgba(255, 255, 255, 72%);
+}
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 704px;
+}
+.main-visual h1 {
+    font-size: 80px;
+    line-height: 128px;
+    margin: 0px;
+}
+.main-visual span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+}
+.left{
+    display: flex;
+    justify-content: left;
+}
+.left p {
+    font-size: 19px;
+    margin-left: 28px;
+}
+
+/* ------ ここからmain-visual-sub  ------*/
+.main-visual-sub {
+    height: 290px;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: center;
+}
+.main-visual-sub  p {
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+.main-visual-sub  p:nth-of-type(1) {
+    margin-top: 48px;
+}
+.main-visual-sub  p:nth-of-type(2) {
+    margin-top: 4px;
+}
+.main-visual-sub  p:nth-of-type(3) {
+    margin-top: 19px;
+}
+
+
+.sub-div2 {
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    width: 519px;
+    height: 241px;
+    margin-left: 54px;
+    /* position: relative;を設定しないとtopは使えません。 */
+    position: relative;
+    top: -54px;
+}
+.sub-div2 p:nth-of-type(1){
+    color: #999999;
+    font-size: 15px;
+    margin: 0px 0px 0px 36px;
+}
+
+.sub-div2 p:nth-of-type(2){
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0px 0px 0px 36px;
+}
+
+
+/* ------ ここからabout  ------*/
+.about {
+    height: 820px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img{
+    margin-right: 28px;
+}
+.about-div {
+    margin-left: 28px;
+    position: relative;
+    top: -23px;
+}
+.about-div > h2 {
+    font-size: 64px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    line-height: 102.4px;
+    letter-spacing: 8px;
+    margin-bottom: 12px;
+}
+.about-div > p {
+    margin: 0px;
+}
+.about-div > p:nth-of-type(1) {
+    line-height: 25.6px;
+    margin-bottom: 47px;
+}
+
+
+/* ------ ここからcontact  ------*/
+.contact{
+    height: 528px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact h2 {
+    text-align: center;
+    font-size: 64px;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 102.4px;
+    letter-spacing: 8px;
+    margin-bottom: 11px;
+}
+.margin-right {
+    margin-right: 25px;
+}
+.contact-p1 {
+    line-height: 25.6px;
+    font-size: 15px;
+}
+.margin-bottom{
+    margin-bottom: 11px;
+}
+.contact-p2 {
+    text-align: center;
+    margin-top: 58px;
+    font-size: 15px;
+}
+.contact-a{
+    font-size: 18px;
+    background-color: #6997C5;
+    padding: 14px 57px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+/* ------ ここからfooter  ------*/
+.footer {
+    height: 85px;
+    background-color: #999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer > p {
+    color:#CCCCCC;
+    font-size: 11px;
+}

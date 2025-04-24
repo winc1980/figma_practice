@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>practice03</title>
+        <link rel="stylesheet" type="text/css" href="practice03.css" media="all">
+        <!-- googleフォントの設定 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;700&display=swap" rel="stylesheet"><!-- Kaisei HarunoUmiのフォントはブラウザで標準に入っていないので、google fontを使用する。 -->
+    </head>
+    <body>
+        <!-- ヘッダー　ここから -->
+        <!-- practice01,02のヘッダーと構成が同じ -->
+        <header>
+            <div class="header-div">
+                <h2 class="header-h2">
+                    どんどこうどん
+                </h2>
+                <p class="header-p">
+                    <a class="header-a" href="">
+                        お問い合せ
+                    </a>
+                </p>
+            </div>
+        </header>
+        <!-- ヘッダー　ここまで -->
+
+        <!-- メインコンテンツ　ここから -->
+
+        <main>
+            <section>
+                <!-- divを複数重ねて各div（各階層）で役割を分担するイメージ -->
+                <!-- cssのコメントアウトを参考に１行ごとにcssを書き足してページを更新、書き足して更新を繰り返すと一つ一つのcssの効果を理解できると思います。 -->
+                <!-- .haikeiは背景画像を指定する役割担当 -->
+                <div class="haikei">
+                    <!-- .bokashiは.haikeiで指定した背景画像に黒いぼかしを入れる役割担当 -->
+                    <div class="bokashi">
+                        <!-- practice01,02で背景と文字を横並びにした部分と同じ構成 -->
+                        <div>
+                            <h1 class="section-div-div-h1">どんどこうどん</h1>
+                            <p class="section-div-div-p">小麦からこだわるうどん屋</p>
+                        </div>
+                        <img class="section-div-img" src="img/fv-picture.png" alt="" width="409px" height="307px">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="fv-center-div">
+                    <div class="fv-center-div2">
+                        <h2 class="fv-center-div-h2">
+                            どんどこうどんのメニュー一覧
+                        </h2>
+                        <div class="fv-center-div-div">
+                            <img class="img" src="img/laura-limsenkhe-gMHYBkmhI-g-unsplash 1.png" alt="">
+                            <img class="img" src="img/youjeen-cho-1zlLiOT81Jw-unsplash 1.png" alt="">
+                            <img class="img" src="img/artur-rutkowski-LDxq4MnYB5U-unsplash 1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="fv-contact-div">
+                    <div class="fv-contact-div-div">
+                        <h2 class="fv-contact-div-h2">
+                            お問い合せ
+                        </h2>
+                        <p class="fv-contact-div-p">
+                            どんどこうどんに対するお問い合わせから以下からお願いします。
+                        </p>
+                        <!-- 基本的なフォームの書き方。 -->
+
+                        <!-- まずはHTMLだけ記述してみよう -->
+                        <!-- その次に擬似要素以外のCSSを設定してみよう -->
+                        <!-- 最後に擬似要素の使い方を理解しよう。 -->
+
+
+                        <form action="">
+                            <p>
+                                <label class="name" for="">お名前</label>
+                                <!-- inputの横に「必須」の文字を入れたい -->
+                                <!-- そのためにはpractice02でも使った”擬似要素”というものを使う -->
+                                <!-- 擬似要素はCSS上で設定する。 -->
+                                <!-- 擬似要素は閉じタグがついてるタグの前後に設定できる。inputタグには閉じタグがないので、labelタグに擬似要素を追加する。 -->
+                                <!-- 詳しくはCSS上のコメントアウトを参照 -->
+                                <input type="text" class="form" name="your_name">
+                            </p>
+                            <p>
+                                <label class="maleadress" for="">メールアドレス</label>
+                                <input type="text" class="form" name="maleadress">
+                            </p>
+                            <p>
+                                <label class="message" for="">メッセージ内容</label>
+                                <textarea name="message" class="form" id="" cols="30" rows="10"></textarea>
+                            </p>
+                            <p class="fv-contact-button"><button>問い合わせる</button></p>
+                        </form>
+
+
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- メインコンテンツ　ここまで -->
+
+        <!-- フッター　ここから -->
+        <!-- これまで作ってきたヘッダーと同じ構成 -->
+        <footer>
+            <div class="footer-div">
+                <p class="footer-div-p">
+                    どんどこうどん
+                </p>
+                <div class="footer-div-div">
+                    <p>
+                        <a class="footer-div-div-a" href="">
+                            お問い合わせ
+                        </a>
+                    </p>
+                    <p class="footer-div-div-p2">
+                        ©︎どんどこうどん
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- フッター　ここまで -->
+
+        <script type="text/javascript" src="assets/base.js"></script>

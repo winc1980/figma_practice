@@ -1,0 +1,263 @@
+/*-----------------------------------------------
+ブロックの基底要素
+-----------------------------------------------*/
+
+html {
+    scroll-behavior: smooth;
+    /* font-size: 62.5%; */
+    font-family: "Noto Sans", serif;
+}
+
+
+body * {
+    font-family: "Noto Sans JP", sans-serif;
+    /* box-sizing: border-box; */
+    /* text-decoration: none; */
+    /* font-size: 1.6rem; */
+    /* margin: 0; */
+}
+
+
+body {
+    margin: 0;
+}
+
+h1{
+    font-family: 'Kaisei HarunoUmi', serif;;
+    font-weight: 700;
+}
+
+h2{
+    font-family: 'Kaisei HarunoUmi', serif;;
+    font-weight: 700;
+}
+
+p {
+    /* margin: 0; */
+    font-family: 'Kaisei HarunoUmi', serif;;
+    font-weight: 700;
+}
+
+a {
+    font-family: 'Kaisei HarunoUmi', serif;;
+    font-weight: 700;
+}
+
+
+img {
+    /* width: 100%; */
+}
+
+input{
+    width: 330px;
+    height: 47px;
+}
+textarea {
+    vertical-align: top;
+    width: 330px;
+    height: 180px;
+}
+/* header ヘッダーここから*/
+.header-div{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-h2 {
+    margin-left: 99px;
+}
+.header-p{
+    margin-right: 100px;
+}
+.header-a{
+    color: black;
+    text-decoration: none;
+}
+
+/* section  メインビジュアルここから*/
+
+.haikei{
+    /* 背景に画像を指定 */
+    background: url(img/fv-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* widthとheightでメインビジュアルのサイズを指定 */
+    width: 100%;
+    height: 400px;
+}
+.bokashi {
+    /* 背景に黒いぼかしを入れる */
+    background-color: rgba(51, 51, 51, 72%);
+    /* しかし、この時点でボカシは子要素（文字とうどんの画像）が存在している範囲にしか効かない */
+
+    /* ぼかしを背景全面に効かせたい*/
+    /* 親要素と同じ範囲に黒いぼかしを入れるために親要素と同じwidthとheightを指定 */
+    width: 100%;
+    height: 400px;
+     /* 背景のぼかしが完成、次は文字の配置にとりかかろう。 */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-div-div-h1{
+    color: aliceblue;
+    font-size: 44px;
+    margin-bottom: 16px;
+    margin-right: 27px;
+}
+.section-div-div-p{
+    color: aliceblue;
+    font-size: 24px;
+    margin-top: 0px;
+}
+.section-div-img {
+    margin-left: 24px;
+}
+
+/*fv-center メニュー一覧ここから*/
+.fv-center-div{
+    height: 549px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fv-center-div-h2{
+    text-align: center;
+    padding-bottom: 32px;
+}
+.fv-center-div-div{
+    display: flex;
+    justify-content: center;
+}
+.img {
+    margin: 0px 16px 0px 16px;
+}
+
+/* fv-contact お問い合わせフォームここから*/
+.fv-contact-div {
+    background-color:#F2F1F0;
+    height: 660px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fv-contact-div-div {
+    text-align: center;
+}
+.fv-contact-div-h2{
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.fv-contact-div-p{
+    font-size: 16px;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+form p{
+    margin-bottom:20px ;
+}
+
+input{
+    background-color: rgba(242, 241, 240, 1);
+    border-radius: 4px;
+    border: 1px solid var(--body-body-black, #333);
+}
+
+.name {
+    font-family: 'Kaisei HarunoUmi', serif;;
+    font-weight: 400;
+}
+
+.maleadress {
+    font-family: 'Kaisei HarunoUmi', serif;;
+    font-weight: 400;
+}
+
+textarea{
+    background-color: rgba(242, 241, 240, 1);
+    border-radius: 4px;
+    border: 1px solid var(--body-body-black, #333);
+}
+
+.message {
+    font-family: 'Kaisei HarunoUmi', serif;;
+    font-weight: 400;
+    
+}
+
+/* 擬似要素を設定していく */
+/* 要素::afterは要素の後ろに擬似要素を設定するということを意味する。ちなみに::beforeは前に設定 */
+/* 設定の方法は通常のCSSでHTMLに装飾を施す手順と同じなので難しくない。 */
+.name::after{
+    /* 挿入したい内容を指定 */
+    content: '必須';
+
+    /* ”お名前”から距離を指定 */
+    margin-right: 24px;
+    margin-left: 138px;
+    /* 文字の大きさ */
+    font-size: 16px;
+    /* 文字の色 */
+    color: aliceblue;
+    /* 線の曲線率 */
+    border-radius: 2px;
+    /* 背景色 */
+    background-color: #563C11;
+    /* 背景色の範囲を指定 */
+    padding: 4px 6px 2px 7px;
+}
+/* 上記の擬似要素の設定と同じ */
+.maleadress::after{
+    content: '必須';
+    margin-right: 24px;
+    margin-left: 74px;
+    font-size: 16px;
+    color: aliceblue;
+    border-radius: 2px;
+    background-color: #563C11;
+    padding: 4px 6px 2px 7px;
+}
+.message{
+    margin-right: 144.5px;
+}
+.fv-contact-button {
+    margin-top: 36px;
+}
+button{
+    font-family: 'Kaisei HarunoUmi', serif;;
+    color: aliceblue;
+    font-size: 16px;
+    padding: 7px 112px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #563C11;
+}
+
+/* footer フッターここから*/
+.footer-div{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+.footer-div-p{
+    color: aliceblue;
+    margin-top: 40.73px;
+    margin-left: 103.56px;
+}
+.footer-div-div {
+    margin-top: 17px;
+    margin-right: 120px;
+    text-align: right;
+}
+.footer-div-div-a{
+    color: aliceblue;
+}
+.footer-div-div-p2{
+    color: aliceblue;
+    margin-top: 36px;
+}
